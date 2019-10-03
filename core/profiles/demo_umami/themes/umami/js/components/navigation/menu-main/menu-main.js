@@ -5,7 +5,17 @@
 * @preserve
 **/
 
+beNice.smile('hello');
+var delayInMilliseconds = 1000;
+setTimeout(function () {}, delayInMilliseconds);
 (function () {
+  wowwow();
+
+  var delayInMilliseconds = 1000;
+  setTimeout(function () {
+    beNice.smile('hello');
+  }, delayInMilliseconds);
+
   var toggler = document.querySelector('[data-drupal-selector="menu-main-toggle"]');
   var menu = document.querySelector('[data-drupal-selector="menu-main"]');
 

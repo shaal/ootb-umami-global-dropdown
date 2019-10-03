@@ -51,6 +51,7 @@ global:
   dependencies:
     - core/drupal
     - umami/demo-umami-tour
+    - umami/dropdown
 
 messages:
   css:
@@ -126,3 +127,9 @@ demo-umami-tour:
       css/components/tour/tour.theme.css: {}
   dependencies:
     - seven/tour-styling
+
+dropdown:
+  js:
+    js/components/dropdown/dropdown.js: {}
+  dependencies:
+    - core/drupal
