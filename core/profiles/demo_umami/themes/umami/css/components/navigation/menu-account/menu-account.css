@@ -3,17 +3,10 @@
  * This file is used to style the account menu.
  */
 
-@media screen and (min-width: 48em) {
-  .menu--account {
-    display: block;
-    text-align: right; /* LTR */
-  }
-  [dir="rtl"] .menu--account {
-    text-align: left;
-  }
-}
 .menu-account {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   margin: 0;
   padding: 0;
   list-style-type: none;

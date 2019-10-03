@@ -15,13 +15,6 @@
 
 .search-block-form form {
   display: flex;
-  margin-top: 1.3rem;
-  margin-bottom: 1.2rem;
-}
-
-.search-iconwrap {
-  /* Compensate for focus styling that offsets left alignment of icon */
-  margin-left: -7px;
 }
 
 @media screen and (min-width: 48em) {

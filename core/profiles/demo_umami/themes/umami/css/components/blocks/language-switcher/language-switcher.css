@@ -2,29 +2,69 @@
  * @file
  * Stylesheet for the language switcher block.
  */
-
-.block-language > .links {
-  display: inline-flex;
+.language-switcher-languages {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  list-style: none;
+  transition: height 0.5s ease-in-out;
+  color: #000;
 }
 
-.block-language > .links li + li {
-  margin-left: 1rem;
+@media screen and (prefers-reduced-motion: reduce) {
+  .language-switcher-languages {
+    transition: height 0s;
+  }
 }
-
-.language-link,
-.language-link:hover,
-.language-link:focus {
+.language-switcher-languages__item {
+  visibility: visible;
+  text-align: center;
+}
+button.language-switcher-toggle {
+  display: flex;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+button.language-switcher-toggle svg {
+  width: 2rem;
+  fill: #464646;
+}
+.language-switcher-arrow {
+  margin: 0.5rem;
+  transition-duration: 0.5s;
+  transform-origin: 50% 40%;
+  color: #464646;
+}
+[aria-expanded="true"] > .language-switcher-arrow {
+  transform: rotateZ(180deg);
+}
+.language-switcher-languages--collapsed .language-switcher-languages__item {
+  visibility: hidden;
+}
+.language-link {
+  display: inline-block;
+  /* Margin required for focus outlines. */
+  margin: 5px 3px;
+  padding-bottom: 0.15em;
+  transition: all 0.2s;
   text-decoration: none;
-  color: inherit;
+  color: #464646;
+  border-bottom: solid 0.15em transparent;
   background-color: inherit;
 }
 .language-link:hover,
+.language-link.is-active:hover,
 .language-link:focus {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #da3c13;
+  border-bottom-color: #da3c13;
+  background-color: inherit;
 }
+.language-link:active,
 .language-link.is-active {
-  font-weight: 700;
+  text-decoration: none;
+  border-bottom-color: #da3c13;
 }

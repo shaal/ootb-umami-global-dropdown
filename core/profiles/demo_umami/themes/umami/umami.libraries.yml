@@ -47,7 +47,9 @@ global:
       css/layout/layout.css: {}
   js:
     js/components/navigation/menu-main/menu-main.js: {}
+    js/components/blocks/language-switcher/language-switcher.js: {}
   dependencies:
+    - core/drupal
     - umami/demo-umami-tour
 
 messages:
